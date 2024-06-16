@@ -1,0 +1,41 @@
+Date : 2024-06-17 00:07:01
+Directory : /home/huangzhujiang/seckill-sys/seckill/user_serv
+Total : 10 files,  1374 codes, 0 comments, 70 blanks, all 1444 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| Go Checksum File |          1 |      1,050 |          0 |          1 |      1,051 |
+| Go               |          8 |        258 |          0 |         65 |        323 |
+| Go Module File   |          1 |         66 |          0 |          4 |         70 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                            | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                               |         10 |      1,374 |          0 |         70 |      1,444 |
+| . (Files)                                                                       |          3 |      1,147 |          0 |         12 |      1,159 |
+| conf                                                                            |          1 |         49 |          0 |         13 |         62 |
+| controller                                                                      |          1 |         83 |          0 |         17 |        100 |
+| db                                                                              |          2 |         38 |          0 |         12 |         50 |
+| utils                                                                           |          3 |         57 |          0 |         16 |         73 |
++---------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                        | language         | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| /home/huangzhujiang/seckill-sys/seckill/user_serv/conf/parser.go                | Go               |         49 |          0 |         13 |         62 |
+| /home/huangzhujiang/seckill-sys/seckill/user_serv/controller/customer.go        | Go               |         83 |          0 |         17 |        100 |
+| /home/huangzhujiang/seckill-sys/seckill/user_serv/db/cutomer_models.go          | Go               |         16 |          0 |          4 |         20 |
+| /home/huangzhujiang/seckill-sys/seckill/user_serv/db/data_center.go             | Go               |         22 |          0 |          8 |         30 |
+| /home/huangzhujiang/seckill-sys/seckill/user_serv/go.mod                        | Go Module File   |         66 |          0 |          4 |         70 |
+| /home/huangzhujiang/seckill-sys/seckill/user_serv/go.sum                        | Go Checksum File |      1,050 |          0 |          1 |      1,051 |
+| /home/huangzhujiang/seckill-sys/seckill/user_serv/main.go                       | Go               |         31 |          0 |          7 |         38 |
+| /home/huangzhujiang/seckill-sys/seckill/user_serv/utils/email_sender.go         | Go               |         29 |          0 |          9 |         38 |
+| /home/huangzhujiang/seckill-sys/seckill/user_serv/utils/md5.go                  | Go               |         11 |          0 |          3 |         14 |
+| /home/huangzhujiang/seckill-sys/seckill/user_serv/utils/random_num_generator.go | Go               |         17 |          0 |          4 |         21 |
+| Total                                                                           |                  |      1,374 |          0 |         70 |      1,444 |
++---------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+

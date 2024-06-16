@@ -15,7 +15,7 @@ type UserServConf struct {
 
 type MysqlConf struct {
 	Addr    string `json:"addr"`
-	User    string `json:"root"`
+	User    string `json:"user"`
 	Pwd     string `json:"pwd"`
 	DbName  string `json:"db_name"`
 	LogMode bool   `json:"log_mode"`

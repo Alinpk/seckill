@@ -9,6 +9,7 @@ import (
 	"github.com/patrickmn/go-cache"
 
 	"context"
+	"fmt"
 )
 
 var c = cache.New(time.Second*30, time.Second*60)
@@ -17,6 +18,9 @@ type CustomerHandler struct{}
 
 func (*CustomerHandler) CustomerVerify(ctx context.Context, in *proto.CustomerEmailRequest, out *proto.CustomerResponse) error {
 	customer := dc.Customer{}
+	defer func() {
+		fmt.Println("final:", out.Code, out.Msg)
+	}()
 	dc.Db.Where("Email = ?", in.Email).First(customer)
 	if customer.Email != "" {
 		out.Code = 500

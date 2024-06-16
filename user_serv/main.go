@@ -3,6 +3,7 @@ package main
 import (
 	"user_serv/conf"
 	"user_serv/controller"
+	dc "user_serv/db"
 	"user_serv/proto"
 
 	"github.com/asim/go-micro/plugins/registry/etcd/v3"
@@ -22,6 +23,7 @@ func main() {
 	ErrWapper(conf.InitConfig())
 	// mail test
 	// ErrWapper(utils.SendVerifyMail([]byte("18810535172@163.com"), []byte("2133")))
+	ErrWapper(dc.InitDataCenter())
 
 	service := micro.NewService(
 		micro.Name("go.micro.service.user_serv"),

@@ -2,11 +2,11 @@ package main
 
 import (
 	"github.com/asim/go-micro/plugins/registry/etcd/v3"
-	"github.com/asim/go-micro/v3"
+	_ "github.com/asim/go-micro/v3"
 	"github.com/asim/go-micro/v3/registry"
+	"github.com/asim/go-micro/v3/web"
 	"github.com/gin-gonic/gin"
-	"goods_web/middleware"
-	"goods_web/router"
+	"web_serv/router"
 )
 
 func main() {
@@ -15,11 +15,6 @@ func main() {
 	//client := grpc.NewClient()
 
 	r := gin.Default()
-
-	// 解决跨域请求问题
-	r.Use(middleware.CrosMiddleWare)
-	// 加入日志中间件
-	r.Use(middleware.Log())
 
 	// 初始化router
 	router.InitRouter(r)
@@ -68,6 +63,7 @@ func main() {
 
 	// Run service
 	if err := service.Run(); err != nil {
-		log.Fatal(err)
+		// log.Fatal(err)
+		panic(err)
 	}
 }

@@ -1,0 +1,12 @@
+"filename", "language", "Go", "Go Module File", "Go Checksum File", "comment", "blank", "total"
+"/home/huangzhujiang/seckill-sys/seckill/user_serv/conf/parser.go", "Go", 49, 0, 0, 0, 13, 62
+"/home/huangzhujiang/seckill-sys/seckill/user_serv/controller/customer.go", "Go", 83, 0, 0, 0, 17, 100
+"/home/huangzhujiang/seckill-sys/seckill/user_serv/db/cutomer_models.go", "Go", 16, 0, 0, 0, 4, 20
+"/home/huangzhujiang/seckill-sys/seckill/user_serv/db/data_center.go", "Go", 22, 0, 0, 0, 8, 30
+"/home/huangzhujiang/seckill-sys/seckill/user_serv/go.mod", "Go Module File", 0, 66, 0, 0, 4, 70
+"/home/huangzhujiang/seckill-sys/seckill/user_serv/go.sum", "Go Checksum File", 0, 0, 1050, 0, 1, 1051
+"/home/huangzhujiang/seckill-sys/seckill/user_serv/main.go", "Go", 31, 0, 0, 0, 7, 38
+"/home/huangzhujiang/seckill-sys/seckill/user_serv/utils/email_sender.go", "Go", 29, 0, 0, 0, 9, 38
+"/home/huangzhujiang/seckill-sys/seckill/user_serv/utils/md5.go", "Go", 11, 0, 0, 0, 3, 14
+"/home/huangzhujiang/seckill-sys/seckill/user_serv/utils/random_num_generator.go", "Go", 17, 0, 0, 0, 4, 21
+"Total", "-", 258, 66, 1050, 0, 70, 1444
