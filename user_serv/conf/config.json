@@ -1,0 +1,13 @@
+{
+    "user_serv": {
+        "port" : 8080,
+        "open_tls" : false
+    },
+    "mysql": {
+        "addr" : "127.0.0.1:3306",
+        "user" : "root",
+        "pwd"  : "12345678",
+        "db_name" : "sh_sys",
+        "log_mode" : "true"
+    }
+}

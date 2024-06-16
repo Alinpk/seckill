@@ -1,0 +1,35 @@
+syntax = "proto3";
+package go.micro.service.customer;
+
+service Customer {
+    rpc CustomerVerify(CustomerEmailRequest) returns(CustomerResponse){}
+    rpc CustomerRegister(CustomerRegisterRequest) returns(CustomerResponse){}
+    rpc CustomerLogin(CustomerLoginRequest) returns(CustomerResponse){}
+    rpc CustomerLogout(CustomerLogoutRequest) returns(CustomerResponse){}
+}
+
+message CustomerEmailRequest {
+    string email = 1;
+}
+
+message CustomerRegisterRequest {
+    string email = 1;
+    string code = 2;
+    string password = 3;
+    string repassword = 4;
+}
+
+message CustomerLoginRequest {
+    string email = 1;
+    string password = 2;
+}
+
+message CustomerLogoutRequest {
+    string email = 1;
+    string jwt = 2;
+}
+
+message CustomerResponse {
+    int32 code = 1;
+    string msg = 2;
+}
