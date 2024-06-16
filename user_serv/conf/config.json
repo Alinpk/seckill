@@ -5,9 +5,9 @@
     },
     "mysql": {
         "addr" : "127.0.0.1:3306",
-        "user" : "root",
-        "pwd"  : "12345678",
-        "db_name" : "sh_sys",
-        "log_mode" : "true"
+        "user" : "sk_sys_user",
+        "pwd"  : "123456",
+        "db_name" : "sk_sys",
+        "log_mode" : true
     }
 }

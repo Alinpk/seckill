@@ -1,12 +1,11 @@
-
 package conf
 
 import (
 	"encoding/json"
 	"errors"
+	"flag"
 	"io/ioutil"
 	"os"
-	"flaag"
 )
 
 type UserServConf struct {
@@ -15,11 +14,11 @@ type UserServConf struct {
 }
 
 type MysqlConf struct {
-	Addr   string `json:"addr"`
-	User   string `json:"root"`
-	Pwd    string `json:"pwd"`
-	DbName string `json:"db_name"`
-	LogMode bool  `json:"log_mode"`
+	Addr    string `json:"addr"`
+	User    string `json:"root"`
+	Pwd     string `json:"pwd"`
+	DbName  string `json:"db_name"`
+	LogMode bool   `json:"log_mode"`
 }
 
 type Conf struct {

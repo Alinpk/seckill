@@ -1,0 +1,4 @@
+# Ignore Protocol Buffers generated code
+*.pb.go
+*.grpc.pb.go
+*.pb.micro.go

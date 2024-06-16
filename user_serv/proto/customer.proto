@@ -1,6 +1,8 @@
 syntax = "proto3";
 package go.micro.service.customer;
 
+option go_package=".;proto";
+
 service Customer {
     rpc CustomerVerify(CustomerEmailRequest) returns(CustomerResponse){}
     rpc CustomerRegister(CustomerRegisterRequest) returns(CustomerResponse){}
@@ -32,4 +34,5 @@ message CustomerLogoutRequest {
 message CustomerResponse {
     int32 code = 1;
     string msg = 2;
+    string email = 3;
 }
