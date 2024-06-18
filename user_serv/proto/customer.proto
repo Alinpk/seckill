@@ -3,6 +3,8 @@ package go.micro.service.customer;
 
 option go_package=".;proto";
 
+// protoc --go_out=. --go-grpc_out=. --micro_out=. customer.proto 
+
 service Customer {
     rpc CustomerVerify(CustomerEmailRequest) returns(CustomerResponse){}
     rpc CustomerRegister(CustomerRegisterRequest) returns(CustomerResponse){}

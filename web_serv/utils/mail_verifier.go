@@ -4,9 +4,6 @@ import "regexp"
 
 // 校验邮箱
 func VerifyEmail(email string) bool {
-	// 匹配电子邮箱
-	pattern := `\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*`
-	reg := regexp.MustCompile(pattern)
-
-	return reg.MatchString(email)
+	var emailRegex = regexp.MustCompile(`^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$`)
+	return emailRegex.MatchString(email)
 }

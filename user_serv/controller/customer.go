@@ -18,10 +18,7 @@ type CustomerHandler struct{}
 
 func (*CustomerHandler) CustomerVerify(ctx context.Context, in *proto.CustomerEmailRequest, out *proto.CustomerResponse) error {
 	customer := dc.Customer{}
-	defer func() {
-		fmt.Println("final:", out.Code, out.Msg)
-	}()
-	dc.Db.Where("Email = ?", in.Email).First(customer)
+	dc.Db.Where("Email = ?", in.Email).First(&customer)
 	if customer.Email != "" {
 		out.Code = 500
 		out.Msg = "Email has been register"

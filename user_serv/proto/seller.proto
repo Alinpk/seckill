@@ -1,0 +1,33 @@
+syntax = "proto3";
+package go.micro.service.seller;
+
+option go_package=".;proto";
+
+// protoc --go_out=. --go-grpc_out=. --micro_out=. seller.proto 
+
+service Seller {
+    rpc SellerVerify(SellerEmailRequest) returns(SellerResp){}
+    rpc SellerLogin(SellerLoginRequest) returns(SellerResp){}
+    rpc SellerLogout(SellerLogoutRequest) returns(SellerResp){}
+}
+
+message SellerEmailRequest {
+    string email = 1;
+}
+
+message SellerLoginRequest {
+    string email = 1;
+    string password = 2;
+    string code = 3;
+}
+
+message SellerLogoutRequest {
+    string email = 1;
+    string jwt = 2;
+}
+
+message SellerResp {
+    int32 code = 1;
+    string msg = 2;
+    string email = 3;
+}

@@ -2,6 +2,8 @@ package utils
 
 import (
 	"gopkg.in/gomail.v2"
+
+	"fmt"
 )
 
 var (
@@ -16,7 +18,11 @@ var (
 )
 
 func SendVerifyMail(to, code []byte) error {
-	return sendMail(to, append(msgPrefix, code...))
+	// return sendMail(to, append(msgPrefix, code...))
+
+	fmt.Printf("[%s]:[%s]\n", string(to), string(code))
+
+	return nil
 }
 
 func sendMail(to, message []byte) error {

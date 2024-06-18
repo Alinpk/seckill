@@ -7,6 +7,8 @@ import (
 	"user_serv/proto"
 
 	"github.com/asim/go-micro/plugins/registry/etcd/v3"
+	"github.com/asim/go-micro/plugins/server/grpc/v3"
+
 	"github.com/asim/go-micro/v3"
 	"github.com/asim/go-micro/v3/registry"
 )
@@ -26,14 +28,17 @@ func main() {
 	ErrWapper(dc.InitDataCenter())
 
 	service := micro.NewService(
+		micro.Server(grpc.NewServer()),
 		micro.Name("go.micro.service.user_serv"),
 		micro.Version("latest"),
 		micro.Registry(etcd.NewRegistry(
 			registry.Addrs("127.0.0.1:2379"),
 		)),
+		// micro.Client(grpc.NewClient()),
 	)
 
 	service.Init()
 	proto.RegisterCustomerHandler(service.Server(), new(controller.CustomerHandler))
+	proto.RegisterSellerHandler(service.Server(), new(controller.SellerHandler))
 	ErrWapper(service.Run())
 }
